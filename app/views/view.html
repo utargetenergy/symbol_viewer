@@ -1,0 +1,20 @@
+<div>
+   <form>
+        <input type="file" ng-file-select="onFileSelect($files)" >
+   </form>
+   <br />
+
+   <b>Statistics:</b><br />
+   <pre>total Symbols: {{totalSymbols}}</pre>
+   <pre>total LHs:   {{totalLHs}}</pre>
+   <b>Preview:</b><br />
+   <i ng-hide="textSrc">No text file choosed</i>
+   <pre>{{textSrc}}</pre>
+   
+   <ul>
+     <li ng-repeat="i in textSrc.children">{{i.Name}} - {{i.Id}}</li>
+   </ul>
+   
+   <b>Progress:</b>
+  <progress value="{{progress}}"></progress>
+</div>
