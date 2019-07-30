@@ -9,6 +9,8 @@
 
 module.exports = function (grunt) {
 
+  grunt.loadNpmTasks('grunt-build-control');
+
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
