@@ -1,0 +1,33 @@
+<div class="container">
+   <form>
+        <input type="file" ng-file-select="onFileSelect($files)" >
+   </form>
+   <br />
+
+   <b>Statistics:</b><br />
+
+    <table class="table table-striped">
+     <tr>
+        <th>Name</th>
+        <th>Counts </th>
+     </tr>
+     <tr> 
+        <td>Total Symbols </td>
+        <td>{{totalSymbols}}</td>
+     </tr>
+     <tr> 
+        <td>Total Sequences </td>
+        <td>{{totalLHs}}</td>
+     </tr>
+    </table>
+   
+   <b>Preview:</b> 
+   <input type="checkbox" ng-model='visible' value ='false' ng-click="toggle()"></input>
+   <br />
+   <i ng-hide="textSrc">No text file choosed</i>
+   <pre ng-show="visible">{{textSrc}}</pre>
+   
+   <br/> 
+   <b>Progress:</b>
+  <progress value="{{progress}}"></progress>
+</div>

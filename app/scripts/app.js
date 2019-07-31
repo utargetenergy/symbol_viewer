@@ -29,25 +29,26 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-       .when('/symbol_viewer/tx/', {
-        templateUrl: 'views/view.html',
-        controller: 'ViewCtrl',
-        controllerAs: 'view'
+       .when('/symbol_viewer/tx', {
+        templateUrl: 'views/tx.html',
+        controller: 'TxCtrl',
+        controllerAs: 'tx'
       })
-        .when('/tx', {
-        templateUrl: 'views/view.html',
-        controller: 'ViewCtrl',
-        controllerAs: 'view'
+      .when('/tx', {
+        templateUrl: 'views/tx.html',
+        controller: 'TxCtrl',
+        controllerAs: 'tx'
+      })
+
+      .when('/symbol_viewer/rx', {
+        templateUrl: 'views/rx.html',
+        controller: 'RxCtrl',
+        controllerAs: 'rx'
       })
       .when('/rx', {
-        templateUrl: 'views/view.html',
-        controller: 'ViewCtrl',
-        controllerAs: 'view'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+        templateUrl: 'views/rx.html',
+        controller: 'RxCtrl',
+        controllerAs: 'rx'
       })
       .otherwise({
         redirectTo: '/'
