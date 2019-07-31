@@ -24,7 +24,17 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/tx', {
+      .when('/symbol_viewer/', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
+       .when('/symbol_viewer/tx/', {
+        templateUrl: 'views/view.html',
+        controller: 'ViewCtrl',
+        controllerAs: 'view'
+      })
+        .when('/tx', {
         templateUrl: 'views/view.html',
         controller: 'ViewCtrl',
         controllerAs: 'view'
