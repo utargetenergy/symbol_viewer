@@ -25,12 +25,17 @@ angular.module('symbolViewerAppApp')
                             f[x] = f[x].replace(/^\s*"|"\s*$/g, '').replace(/""/g, '"');
                           } else if (x) {
                         f.splice(x - 1, 2, [f[x - 1], f[x]].join(sep));
-                      } else f = f.shift().split(sep).concat(f);
-                    } else f[x].replace(/""/g, '"');
+                      } else { 
+                        f = f.shift().split(sep).concat(f);
+                      }
+                    } else {
+                        f[x].replace(/""/g, '"');
+                    }
+
                   } a[i] = f;
         }
         return a;
-   }
+   };
   console.log(fileReader);
 
   $scope.getFile = function () {
@@ -70,14 +75,16 @@ angular.module('symbolViewerAppApp')
             $scope.file = (e.srcElement || e.target).files[0];
             $scope.getFile();
       
-          })
+          });
       
         }
     
-    } 
+    }; 
    })
    .factory("fileReader", function ($q, $log) {
- 
+
+        $log.log("fileReader"); 
+
         var onLoad = function(reader, deferred, scope) {
             return function () {
                 scope.$apply(function () {
