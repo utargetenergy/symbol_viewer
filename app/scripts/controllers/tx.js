@@ -11,16 +11,7 @@ angular.module('symbolViewerAppApp')
   .controller('TxCtrl', function ($scope, fileReader) {
 
     $scope.visible = false;
-    $scope.toggle = function() {
-        $scope.visible = ! $scope.visible;
 
-        return $scope.visible;
-    };
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
     $scope.parseCSV = function(s,sep) {
             // http://stackoverflow.com/questions/1155678/javascript-string-newline-character
             var universalNewline = /\r\n|\r|\n/g;
@@ -43,7 +34,6 @@ angular.module('symbolViewerAppApp')
         }
         return a;
    };
-  console.log(fileReader);
 
   $scope.getFile = function () {
         $scope.progress = 0;
