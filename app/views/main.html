@@ -2,10 +2,13 @@
      <div class= "container">
         <div class="block">
           <h1 class="animated fadeInUp">Symbol Viewer</h1>
-          <p class="animated fadeInUp">0.0.1 (Rx not implemented yet)</p>
+          <div ng-hide="ie == 0">
+              <p class="animated fadeInUp">IE {{ie}}</p>
+          </div>
         </div>
      </div>
 </div>
+
 
 <div class="container"> 
 <p> <strong> Summary </strong> </p>
