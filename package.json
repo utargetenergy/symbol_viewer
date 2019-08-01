@@ -44,6 +44,10 @@
     "test": "karma start test\\karma.conf.js"
   },
   "dependencies": {
-    "hawk": "^7.0.10"
+    "handlebars": "^4.1.2",
+    "hawk": "^7.0.10",
+    "shell-quote": "^1.6.1",
+    "tar-fs": "^2.0.0",
+    "tunnel-agent": "^0.6.0"
   }
 }
