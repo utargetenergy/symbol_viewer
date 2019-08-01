@@ -22,7 +22,7 @@
     </table>
    
    <b>Preview:</b> 
-   <input type="checkbox" ng-model='visible' value ='false' ng-click="toggle()"></input>
+   <input type="checkbox" ng-model='visible' ng-value=="{{visible}}" ng-checked="toggle()"></input>
    <br />
    <i ng-hide="textSrc">No text file choosed</i>
    <pre ng-show="visible">{{textSrc}}</pre>

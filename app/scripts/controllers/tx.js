@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc function
- * @name symbolViewerAppApp.controller:AboutCtrl
+ * @name symbolViewerAppApp.controller:TxCtrl
  * @description
- * # AboutCtrl
+ * # TxCtrl
  * Controller of the symbolViewerAppApp
  */
 angular.module('symbolViewerAppApp')
@@ -13,6 +13,8 @@ angular.module('symbolViewerAppApp')
     $scope.visible = false;
     $scope.toggle = function() {
         $scope.visible = ! $scope.visible;
+
+        return $scope.visible;
     };
     this.awesomeThings = [
       'HTML5 Boilerplate',
